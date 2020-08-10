@@ -1,0 +1,35 @@
+{
+    "AWSEBDockerrunVersion": 2,
+    "containerDefinitions": [
+        {
+            "name": "client",
+            "image": "lyugaloki/multi-client",
+            "hostname": "client",
+            "essential": false
+        },
+        {
+            "name": "server",
+            "image": "lyugaloki/multi-server",
+            "hostname": "express",
+            "essential": false
+        },
+        {
+            "name": "worker",
+            "image": "lyugaloki/multi-worker",
+            "hostname": "worker",
+            "essential": false
+        },
+        {
+            "name": "ngnix",
+            "image": "lyugaloki/multi-ngnix",
+            "essential": true,
+            "portMappings": [
+                {
+                    "hostPort": 80,
+                    "containerPort": 80
+                }
+            ],
+            "links": ["client", "server"]
+        }
+    ]
+}
