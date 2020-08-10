@@ -23,8 +23,8 @@
             "memory": 128
         },
         {
-            "name": "ngnix",
-            "image": "lyugaloki/multi-ngnix",
+            "name": "nginx",
+            "image": "lyugaloki/multi-nginx",
             "essential": true,
             "portMappings": [
                 {

@@ -15,7 +15,7 @@ after_success:
     - docker build -t lyugaloki/multi-worker ./worker
     # Log in to the docker CLI
     - echo "$DOCKER_PW" | docker login -u "$DOCKER_ID" --password-stdin
-    # Take thos images and push tehm to docker hub
+    # Take those images and push tehm to docker hub
     - docker push lyugaloki/multi-client
     - docker push lyugaloki/multi-nginx
     - docker push lyugaloki/multi-server
