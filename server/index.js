@@ -25,7 +25,8 @@ pgClient.on('connect', () => {
         .catch( err => console.log('CREATE TABLE error:', err) );
 })
 
-//console.log(keys);
+// For debugging ONLY
+console.log(keys);
 
 // Redis Client Setup
 const redis = require('redis');
